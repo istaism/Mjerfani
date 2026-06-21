@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>محمدجواد عرفانی | Mohammad Javad Erfani</title>
   <meta name="description" content="برند شخصی محمدجواد عرفانی - خواننده، دبیر، پژوهشگر و استراتژیست رسانه‌های اجتماعی">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,14 +22,17 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; height: 100%; }
 
     body {
       font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      overflow-x: hidden;
+      min-height: 100%;
+      position: relative;
+      touch-action: manipulation;
+      -webkit-text-size-adjust: 100%;
     }
 
     .en { font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -52,7 +55,10 @@
 
     .bg-mesh {
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: -1;
       pointer-events: none;
       background:
@@ -63,7 +69,10 @@
     body::before {
       content: "";
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 9999;
       opacity: 0.025;
@@ -91,6 +100,7 @@
     nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       z-index: 100;
       padding: 1rem 2rem;
@@ -153,6 +163,8 @@
     /* Hero */
     .hero {
       min-height: 100vh;
+      min-height: 100dvh;
+      min-height: -webkit-fill-available;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -161,6 +173,7 @@
       padding: 7rem 2rem 4rem;
       position: relative;
       animation: fadeInUp 1s ease-out;
+      overflow: hidden;
     }
 
     .hero-glow {
@@ -462,7 +475,6 @@
       .menu-toggle { display: block; }
       .hero { padding-top: 6rem; }
       .section { padding: 4rem 1.5rem; }
-      .about-content { padding: 2rem; }
       .links-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
