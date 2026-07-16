@@ -1,0 +1,20 @@
+{
+  "name": "محمدجواد عرفانی | وب‌سایت رسمی",
+  "short_name": "محمدجواد عرفانی",
+  "description": "وب‌سایت رسمی محمدجواد عرفانی",
+  "lang": "fa-IR",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080706",
+  "theme_color": "#080706",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
